@@ -20,24 +20,20 @@
             </v-col>
             <v-col 
             cols="12">
-                <v-text-field
-                  label="Email"
-                  prepend-icon="mdi-email"
-                ></v-text-field>
-                 <v-text-field
-                  label="Password"
-                  prepend-icon="mdi-lock"
-                  append-outer-icon="mdi-help"
-                ></v-text-field>
+              <AppInput nombre="EMAIL" icono="mdi-email"></AppInput>
+              <AppInput nombre="CONTRASEÑA" icono="mdi-lock" outer_icono="mdi-help"></AppInput>
             </v-col>
         </v-row>
     </v-container>
 </template>
 
 <script>
+
+import AppInput from "../components/AppInput";
+
 export default {
-    methods: {
-        
+    components:{
+        AppInput
     }
 }
 
