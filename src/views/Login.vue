@@ -23,6 +23,10 @@
               <AppInput nombre="EMAIL" icono="mdi-email"></AppInput>
               <AppInput nombre="CONTRASEÑA" icono="mdi-lock" outer_icono="mdi-help"></AppInput>
             </v-col>
+            <v-col
+            cols="12">
+                <AppButton texto="Log In ->" btnColor="primary" btnElevation=15 absolute right rounded x-large ></AppButton>
+            </v-col>
         </v-row>
     </v-container>
 </template>
@@ -30,10 +34,12 @@
 <script>
 
 import AppInput from "../components/AppInput";
+import AppButton from "../components/AppButton";
 
 export default {
     components:{
-        AppInput
+        AppInput,
+        AppButton
     }
 }
 
