@@ -1,8 +1,7 @@
 <template>
   <div v-fondo>
     <v-container
-    class="contenedor"
-    fill-height>
+    class="contenedor">
       <v-row class="align-center">
         <v-col
         cols="2">
@@ -30,23 +29,30 @@
             xl-large 
             texto="Escuela de Diseño La Metro" 
             icono_izq="mdi-school" 
-            icono_der="mdi-arrow-right">
+            icono_der="mdi-arrow-right"
+            m_width="90%">
             </AppButton>
           </template>
+          <v-list>
+            <v-list-item>
+              <v-list-item-title>Hola</v-list-item-title>
+            </v-list-item>
+          </v-list>
         </v-menu>
         <v-menu>
           <template
           cols=12
-          v-slot:activator="{ on }"
+          v-slot:activator="{ onn }"
           >
             <AppButton 
-              v-on="on"
+              v-on="onn"
               class="my-3 mx-auto"
               dark rounded 
               xl-large 
-              texto="Escuela de Diseño La Metro" 
+              texto="Independencia 400" 
               icono_izq="mdi-map-marker" 
-              icono_der="mdi-crosshairs-gps">
+              icono_der="mdi-crosshairs-gps"
+              m_width="90%">
             </AppButton>
           </template>
         </v-menu>

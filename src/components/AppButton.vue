@@ -1,6 +1,7 @@
 <template>
-    <v-btn v-bind="$attrs" :color=this.btnColor :elevation=this.btnElevation>
-        <v-icon class="mr-4" left v-show="this.icono_izq"> {{this.icono_izq}} </v-icon>{{texto}} <v-icon class="ml-4" right v-show="this.icono_der"> {{this.icono_der}}</v-icon></v-btn>
+    <v-btn v-bind="$attrs" :min-width=this.m_width :color=this.btnColor :elevation=this.btnElevation class="d-flex justify-space-between text-left">
+        <v-icon left v-show="this.icono_izq"> {{this.icono_izq}} </v-icon><span>{{texto}}</span> <v-icon right v-show="this.icono_der"> {{this.icono_der}}</v-icon>
+    </v-btn>
 </template>
 
 <script>
@@ -12,7 +13,7 @@ export default {
         },
         btnColor: {
             type:String,
-            required:true
+            required:false
         },
         btnElevation: {
             type:String,
@@ -25,6 +26,10 @@ export default {
         icono_der: {
             type:String,
             required:false
+        },
+        m_width: {
+            type: String,
+            required: false
         }
     }
 }
