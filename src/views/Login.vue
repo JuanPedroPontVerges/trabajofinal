@@ -26,7 +26,7 @@
             <v-col
             cols="12">
             <router-link to="/home">
-                <AppButton texto="Log In ->" btnColor="primary" btnElevation=15 absolute right rounded x-large ></AppButton>
+                <AppButton @click.native="logged" texto="Log In ->" btnColor="primary" btnElevation=15 absolute right rounded x-large ></AppButton>
             </router-link>
             </v-col>
         </v-row>
@@ -42,6 +42,11 @@ export default {
     components:{
         AppInput,
         AppButton
+    },
+    methods:{
+        logged() {
+            this.$store.commit("log")
+        }
     }
 }
 

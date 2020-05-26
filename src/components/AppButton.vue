@@ -14,7 +14,7 @@ export default {
             required:true
         },
         btnElevation: {
-            type:Number,
+            type:String,
             required:false
         }
     }
