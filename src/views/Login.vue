@@ -8,7 +8,7 @@
             <v-col 
             class="title text-center white--text"
             cols="12">
-            <h2>Nombre</h2>
+            <h1>Nombre</h1>
             </v-col>
         </v-row>
         <v-row>
@@ -25,7 +25,9 @@
             </v-col>
             <v-col
             cols="12">
+            <router-link to="/home">
                 <AppButton texto="Log In ->" btnColor="primary" btnElevation=15 absolute right rounded x-large ></AppButton>
+            </router-link>
             </v-col>
         </v-row>
     </v-container>
