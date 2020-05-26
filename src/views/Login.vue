@@ -20,13 +20,30 @@
             </v-col>
             <v-col 
             cols="12">
-              <AppInput nombre="EMAIL" icono="mdi-email"></AppInput>
-              <AppInput nombre="CONTRASEÑA" icono="mdi-lock" outer_icono="mdi-help"></AppInput>
+              <AppInput 
+              nombre="EMAIL" 
+              icono="mdi-email">
+              </AppInput>
+              <AppInput 
+              nombre="CONTRASEÑA" 
+              icono="mdi-lock" 
+              outer_icono="mdi-help">
+              </AppInput>
             </v-col>
             <v-col
             cols="12">
             <router-link to="/home">
-                <AppButton @click.native="logged" texto="Log In ->" btnColor="primary" btnElevation=15 absolute right rounded x-large ></AppButton>
+                <AppButton 
+                @click.native="logged" 
+                texto="Log In" 
+                icono_der="mdi-arrow-right" 
+                btnColor="primary" 
+                btnElevation=15 
+                absolute 
+                right 
+                rounded 
+                x-large >
+                </AppButton>
             </router-link>
             </v-col>
         </v-row>
