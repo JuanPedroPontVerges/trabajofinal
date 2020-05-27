@@ -25,7 +25,7 @@
             <AppButton
             alineacion="d-flex justify-space-between"
             class="mx-auto"
-            v-on="on"
+            @click.native="on"
             dark 
             rounded 
             xl-large 
@@ -37,6 +37,7 @@
           </template>
           <v-list>
             <v-list-item>
+              <v-list-item-title>Hola</v-list-item-title>
               <v-list-item-title>Hola</v-list-item-title>
             </v-list-item>
           </v-list>
