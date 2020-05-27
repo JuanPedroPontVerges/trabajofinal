@@ -1,3 +1,4 @@
+
 <template>
   <div v-fondo>
     <v-container
@@ -22,6 +23,7 @@
           v-slot:activator="{ on }"
           >
             <AppButton
+            alineacion="d-flex justify-space-between"
             class="mx-auto"
             v-on="on"
             dark 
@@ -45,6 +47,7 @@
           v-slot:activator="{ onn }"
           >
             <AppButton 
+              alineacion="d-flex justify-space-between"
               v-on="onn"
               class="my-3 mx-auto"
               dark rounded 
@@ -58,12 +61,92 @@
         </v-menu>
       </v-row>
     </v-container>
+    
+    <v-container>
+      <v-row align="center" class="mx-auto">
+        <v-col cols="9">
+          <v-sheet width="100%" class="py-2" color="secondary white--text" elevation="15">
+            <h3 class="mx-2 body-1">Horario de Hoy</h3>
+          </v-sheet>
+        </v-col>
+        <v-col>
+          <v-btn color="secondary" fab small>
+            <v-icon color="primary">mdi-calendar</v-icon>
+          </v-btn>
+        </v-col>
+      </v-row>
+      <v-row align="center" class="mx-auto">
+        <v-col cols="9">
+          <v-sheet width="100%" class="py-2" color="secondary white--text" elevation="15">
+            <h3 class="mx-2 body-1">Nueva Tarea</h3>
+          </v-sheet>
+        </v-col>
+        <v-col>
+          <v-btn color="secondary" fab small>
+            <v-icon color="primary">mdi-plus</v-icon>
+          </v-btn>
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col>
+          <AppButton 
+          alineacion="d-flex justify-space-around white--text font-weight-black subtitle-1" 
+          min-height="60px" 
+          texto="CLASES" 
+          btnColor="primary" 
+          icono_izq="mdi-calendar" 
+          xl-large block>
+          </AppButton>
+        </v-col>
+        <v-col>
+          <AppButton 
+          alineacion="d-flex justify-space-around white--text font-weight-black subtitle-1" 
+          min-height="60px" 
+          texto="ASISTENCIAS" 
+          btnColor="verde" 
+          icono_izq="mdi-calendar" 
+          xl-large block>
+          </AppButton>
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col>
+          <AppButton 
+          alineacion="d-flex justify-space-around white--text font-weight-black subtitle-1" 
+          min-height="60px" 
+          texto="MATERIAS" 
+          btnColor="violeta" 
+          icono_izq="mdi-calendar" 
+          xl-large block>
+          </AppButton>
+        </v-col>
+        <v-col>
+          <AppButton 
+          alineacion="d-flex justify-space-around white--text font-weight-black subtitle-1" 
+          min-height="60px" 
+          texto="TAREAS" 
+          btnColor="amarillo" 
+          icono_izq="mdi-calendar" 
+          xl-large block>
+          </AppButton>
+        </v-col>
+      </v-row>
+    </v-container>
+
+    <v-container>
+      <v-row>
+        <v-col>
+          
+        </v-col>
+      </v-row>
+    </v-container>
   </div>
 </template>
 
+
 <script>
 
-  import AppButton from "../components/AppButton"
+import AppButton from "../components/AppButton"
 
 export default {
   name: "Home",
