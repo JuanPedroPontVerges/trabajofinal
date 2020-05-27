@@ -2,7 +2,8 @@
     <v-btn v-bind="$attrs" :min-width=this.m_width :color=this.btnColor :elevation=this.btnElevation :class="this.alineacion">
         <v-icon 
         left 
-        v-show="this.icono_izq">
+        v-show="this.icono_izq"
+        :color="this.img_color">
         {{this.icono_izq}} 
         </v-icon>
         <span 
@@ -16,7 +17,8 @@
         </v-icon> 
         <v-icon 
         right 
-        v-show="this.icono_der"> 
+        v-show="this.icono_der"
+        :color="this.img_color" > 
         {{this.icono_der}}
         </v-icon>
     </v-btn>

@@ -1,6 +1,5 @@
-
 <template>
-  <div v-fondo>
+  <div v-fondo class="fill-height">
     <v-container
     class="contenedor">
       <v-row class="align-center">
@@ -25,8 +24,8 @@
             <AppButton
             alineacion="d-flex justify-space-between"
             class="mx-auto"
-            @click.native="on"
-            dark 
+            v-on.native="on"
+            dark
             rounded 
             xl-large 
             texto="Escuela de Diseño La Metro" 
@@ -107,9 +106,40 @@
     </v-container>
 
     <v-container>
+      <v-row >
+        <v-col>
+          <v-card color="secondary" class="carta">
+            <v-list-item>
+              <v-list-item-avatar color="white">
+                <v-icon>mdi-calendar</v-icon>
+              </v-list-item-avatar>
+              <v-list-item-content>
+                <v-list-item-title class="headline white--text title">Proximas tareas</v-list-item-title>
+                <v-list-item-subtitle class="primary--text">{{this.eventos.fecha}} | {{this.eventos.evento}}</v-list-item-subtitle>
+              </v-list-item-content>
+              <v-card-actions>
+                <v-btn icon>
+                  <v-icon right color="white">mdi-arrow-right</v-icon>
+                </v-btn>
+              </v-card-actions>
+            </v-list-item>
+          </v-card>
+        </v-col>
+      </v-row>
       <v-row>
         <v-col>
-
+          <v-card color="secondary" class="carta">
+            <v-list-item>
+              <v-list-item-avatar color="white">
+                <v-icon>mdi-account-check-outline</v-icon>
+              </v-list-item-avatar>
+              <v-list-item-content>
+                <v-list-item-title class="headline white--text title my-2">Asistencia general</v-list-item-title>
+                <v-progress-linear value="12"
+                buffer-value="80"></v-progress-linear>
+              </v-list-item-content>
+            </v-list-item>
+          </v-card>
         </v-col>
       </v-row>
     </v-container>
@@ -147,7 +177,11 @@ export default {
           texto:"TAREAS",
           icono:"mdi-file-document-edit-outline"
         }
-      ]
+      ],
+      eventos:{
+        fecha:"25 de Junio",
+        evento:"Cata de OG Kush"
+      }
     }
   },
   components:{
@@ -173,5 +207,4 @@ export default {
     border-bottom-right-radius: 30px;
     border-bottom-left-radius: 30px;
   }
-
 </style>

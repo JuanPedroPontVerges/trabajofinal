@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar app v-if="this.$store.state.logged" bottom color="white">
+    <v-app-bar app v-if="this.$store.state.logged" bottom color="white" class="d-flex justify-center">
       <v-btn icon class="mx-3">
         <v-icon large>mdi-home</v-icon>
       </v-btn>
