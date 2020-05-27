@@ -87,48 +87,20 @@
           </v-btn>
         </v-col>
       </v-row>
+
       <v-row>
-        <v-col>
-          <AppButton 
-          alineacion="d-flex justify-space-around white--text font-weight-black subtitle-1" 
-          min-height="60px" 
-          texto="CLASES" 
-          btnColor="primary" 
-          icono_izq="mdi-calendar" 
-          xl-large block>
-          </AppButton>
-        </v-col>
-        <v-col>
-          <AppButton 
-          alineacion="d-flex justify-space-around white--text font-weight-black subtitle-1" 
-          min-height="60px" 
-          texto="ASISTENCIAS" 
-          btnColor="verde" 
-          icono_izq="mdi-calendar" 
-          xl-large block>
-          </AppButton>
-        </v-col>
-      </v-row>
-      <v-row>
-        <v-col>
-          <AppButton 
-          alineacion="d-flex justify-space-around white--text font-weight-black subtitle-1" 
-          min-height="60px" 
-          texto="MATERIAS" 
-          btnColor="violeta" 
-          icono_izq="mdi-calendar" 
-          xl-large block>
-          </AppButton>
-        </v-col>
-        <v-col>
-          <AppButton 
-          alineacion="d-flex justify-space-around white--text font-weight-black subtitle-1" 
-          min-height="60px" 
-          texto="TAREAS" 
-          btnColor="amarillo" 
-          icono_izq="mdi-calendar" 
-          xl-large block>
-          </AppButton>
+        <v-col
+        v-for="n in botones" :key="n"
+        cols="6">
+        <AppButton
+        alineacion="d-flex justify-space-around white--text font-weight-black subtitle-1"
+        min-height="60px"
+        :texto=n.texto
+        :btnColor=n.color
+        :icono_izq=n.icono
+        xl-large
+        block>
+        </AppButton>
         </v-col>
       </v-row>
     </v-container>
@@ -136,7 +108,7 @@
     <v-container>
       <v-row>
         <v-col>
-          
+
         </v-col>
       </v-row>
     </v-container>
@@ -152,7 +124,29 @@ export default {
   name: "Home",
   data(){
     return {
-      nombre:"Fasito 420"
+      nombre:"Fasito 420",
+      botones:[
+        {
+          color:"primary",
+          texto:"CLASES",
+          icono:"mdi-calendar"
+        },
+        {
+          color:"verde",
+          texto:"ASISTENCIA",
+          icono:"mdi-account-check-outline"
+        },
+        {
+          color:"violeta",
+          texto:"MATERIAS",
+          icono:"mdi-notebook-outline"
+        },
+        {
+          color:"amarillo",
+          texto:"TAREAS",
+          icono:"mdi-file-document-edit-outline"
+        }
+      ]
     }
   },
   components:{
