@@ -22,7 +22,7 @@
           v-slot:activator="{ on }"
           >
             <AppButton
-            alineacion="d-flex justify-space-between"
+            estilos="d-flex justify-space-between"
             class="mx-auto"
             v-on.native="on"
             dark
@@ -31,7 +31,7 @@
             texto="Escuela de Diseño La Metro" 
             icono_izq="mdi-school" 
             icono_der="mdi-arrow-right"
-            m_width="90%">
+            min-width="90%">
             </AppButton>
           </template>
           <v-list>
@@ -47,15 +47,16 @@
           v-slot:activator="{ onn }"
           >
             <AppButton 
-              alineacion="d-flex justify-space-between"
+              estilos="d-flex justify-space-between"
               v-on="onn"
               class="my-3 mx-auto"
-              dark rounded 
+              dark 
+              rounded 
               xl-large 
               texto="Independencia 400" 
               icono_izq="mdi-map-marker" 
               icono_der="mdi-crosshairs-gps"
-              m_width="90%">
+              min-width="90%">
             </AppButton>
           </template>
         </v-menu>
@@ -90,13 +91,13 @@
 
       <v-row>
         <v-col
-        v-for="n in botones" :key="n"
+        v-for="n in this.$store.state.botones" :key="n"
         cols="6">
         <AppButton
-        alineacion="d-flex justify-space-around white--text font-weight-black subtitle-1"
+        estilos="d-flex justify-space-around white--text font-weight-black subtitle-1"
         min-height="60px"
         :texto=n.texto
-        :btnColor=n.color
+        :color=n.color
         :icono_izq=n.icono
         xl-large
         block>
@@ -115,7 +116,7 @@
               </v-list-item-avatar>
               <v-list-item-content>
                 <v-list-item-title class="headline white--text title">Proximas tareas</v-list-item-title>
-                <v-list-item-subtitle class="primary--text">{{this.eventos.fecha}} | {{this.eventos.evento}}</v-list-item-subtitle>
+                <v-list-item-subtitle class="primary--text">{{this.$store.state.eventos.fecha}} | {{this.$store.state.eventos.evento}}</v-list-item-subtitle>
               </v-list-item-content>
               <v-card-actions>
                 <v-btn icon>
@@ -155,33 +156,7 @@ export default {
   name: "Home",
   data(){
     return {
-      nombre:"Fasito 420",
-      botones:[
-        {
-          color:"primary",
-          texto:"CLASES",
-          icono:"mdi-calendar"
-        },
-        {
-          color:"verde",
-          texto:"ASISTENCIA",
-          icono:"mdi-account-check-outline"
-        },
-        {
-          color:"violeta",
-          texto:"MATERIAS",
-          icono:"mdi-notebook-outline"
-        },
-        {
-          color:"amarillo",
-          texto:"TAREAS",
-          icono:"mdi-file-document-edit-outline"
-        }
-      ],
-      eventos:{
-        fecha:"25 de Junio",
-        evento:"Cata de OG Kush"
-      }
+      nombre:"Fasito 420"
     }
   },
   components:{

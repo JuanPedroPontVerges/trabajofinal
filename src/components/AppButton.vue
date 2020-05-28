@@ -1,5 +1,6 @@
 <template>
-    <v-btn v-bind="$attrs" :min-width=this.m_width :color=this.btnColor :elevation=this.btnElevation :class="this.alineacion">
+    <v-btn v-bind="$attrs" 
+    :class="this.estilos">
         <v-icon 
         left 
         v-show="this.icono_izq"
@@ -30,20 +31,11 @@ export default {
         texto:{
             type:String,
         },
-        btnColor: {
-            type:String,
-        },
-        btnElevation: {
-            type:String,
-        },
         icono_izq: {
             type:String,
         },
         icono_der: {
             type:String,
-        },
-        m_width: {
-            type: String,
         },
         icono: {
             type:String,
@@ -51,7 +43,7 @@ export default {
         img_color: {
             type:String,
         },
-        alineacion: {
+        estilos: {
             type:String
         }
     }

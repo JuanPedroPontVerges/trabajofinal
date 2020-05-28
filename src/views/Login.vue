@@ -37,8 +37,8 @@
                 @click.native="logged" 
                 texto="Log In" 
                 icono_der="mdi-arrow-right" 
-                btnColor="primary" 
-                btnElevation=15 
+                color="primary" 
+                elevation=15 
                 absolute 
                 right 
                 rounded 
