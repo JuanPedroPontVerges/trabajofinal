@@ -12,6 +12,37 @@
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
     <div id="app"></div>
+    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="/__/firebase/6.2.0/firebase-app.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="/__/firebase/6.2.0/firebase-auth.js"></script>
+
     <!-- built files will be auto injected -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-analytics.js"></script>
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyBOmQaOlIFvmIUAlqHD-lhCYoi_oo3vgoo",
+        authDomain: "tesis-e6c1b.firebaseapp.com",
+        databaseURL: "https://tesis-e6c1b.firebaseio.com",
+        projectId: "tesis-e6c1b",
+        storageBucket: "tesis-e6c1b.appspot.com",
+        messagingSenderId: "404881172199",
+        appId: "1:404881172199:web:15221923ed0b152fd6e442",
+        measurementId: "G-GG4J7XE1VJ"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
+    <script src="/__/firebase/init.js"></script>
   </body>
 </html>

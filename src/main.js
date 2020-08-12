@@ -5,7 +5,10 @@ import router from "./router";
 import vuetify from "./plugins/vuetify";
 import "roboto-fontface/css/roboto/roboto-fontface.css";
 import "@mdi/font/css/materialdesignicons.css";
+import vueResource from "vue-resource"
 
+
+Vue.use(vueResource)
 Vue.config.productionTip = false;
 
 new Vue({

@@ -24,7 +24,7 @@
             <AppButton
             estilos="d-flex justify-space-between"
             class="mx-auto"
-            v-on.native="on"
+            v-on="on"
             dark
             rounded 
             xl-large 
@@ -51,7 +51,7 @@
               v-on="onn"
               class="my-3 mx-auto"
               dark 
-              rounded 
+              rounded
               xl-large 
               texto="Independencia 400" 
               icono_izq="mdi-map-marker" 
@@ -64,7 +64,7 @@
     </v-container>
     
     <v-container>
-      <v-row align="center" class="mx-auto">
+      <v-row justify="center" class="mx-auto">
         <v-col cols="9">
           <v-sheet width="100%" class="py-2" color="secondary white--text" elevation="15">
             <h3 class="mx-2 body-1">Horario de Hoy</h3>
@@ -91,7 +91,7 @@
 
       <v-row>
         <v-col
-        v-for="n in this.$store.state.botones" :key="n"
+        v-for="n in this.$store.state.botones" :key="n.id"
         cols="6">
         <AppButton
         estilos="d-flex justify-space-around white--text font-weight-black subtitle-1"

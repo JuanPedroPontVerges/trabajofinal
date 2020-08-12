@@ -10,22 +10,26 @@ const store = new Vuex.Store({
             {
                 color: "primary",
                 texto: "CLASES",
-                icono: "mdi-calendar"
+                icono: "mdi-calendar",
+                id:2
             },
             {
                 color: "verde",
                 texto: "ASISTENCIA",
-                icono: "mdi-account-check-outline"
+                icono: "mdi-account-check-outline",
+                id: 3
             },
             {
                 color: "violeta",
                 texto: "MATERIAS",
-                icono: "mdi-notebook-outline"
+                icono: "mdi-notebook-outline",
+                id: 4
             },
             {
                 color: "amarillo",
                 texto: "TAREAS",
-                icono: "mdi-file-document-edit-outline"
+                icono: "mdi-file-document-edit-outline",
+                id: 5
             }
         ],
         eventos: {
